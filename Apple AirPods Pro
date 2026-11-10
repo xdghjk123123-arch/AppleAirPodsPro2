@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirPods Store</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Tahoma,sans-serif;background:#f5f7fb;color:#111;line-height:1.7}
+header{background:#111;color:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800}.badge{font-size:13px;color:#bbb}
+.hero{min-height:620px;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:70px 8%;background:linear-gradient(135deg,#fff 0%,#eef2f7 100%)}
+.text{max-width:520px}.tag{display:inline-block;background:#111;color:#fff;padding:7px 14px;border-radius:30px;font-size:13px;margin-bottom:18px}
+h1{font-size:52px;line-height:1.1;margin-bottom:18px}h1 span{color:#777}
+.desc{color:#666;font-size:18px;margin-bottom:25px}
+.price{font-size:32px;font-weight:800;margin-bottom:20px}
+.btn{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:bold;transition:.2s}.btn:hover{transform:translateY(-2px);background:#333}
+.product{width:min(420px,80vw);height:420px;border-radius:40px;background:radial-gradient(circle at 50% 35%,#fff 0%,#e4e8ee 45%,#c8ced7 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 70px #aeb5c255}
+.airpods{position:relative;width:210px;height:270px}
+.pod{position:absolute;width:82px;height:125px;background:linear-gradient(135deg,#fff,#dfe3e8);border-radius:45px 45px 32px 32px;box-shadow:8px 12px 22px #7775}
+.pod:after{content:"";position:absolute;bottom:-65px;left:28px;width:27px;height:85px;background:linear-gradient(90deg,#fff,#d8dce1);border-radius:0 0 18px 18px}
+.pod.left{left:8px;transform:rotate(-8deg)}.pod.right{right:8px;transform:rotate(8deg)}
+section{padding:65px 8%}.title{text-align:center;font-size:32px;margin-bottom:35px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;padding:28px;border-radius:18px;box-shadow:0 10px 35px #1820330d;text-align:center}
+.icon{font-size:35px;margin-bottom:10px}.card h3{margin-bottom:8px}.card p{color:#777}
+.buy{background:#111;color:#fff;text-align:center;border-radius:24px;padding:50px 20px;margin:0 8% 60px}
+.buy h2{font-size:32px;margin-bottom:10px}.buy p{color:#bbb;margin-bottom:20px}
+footer{text-align:center;padding:25px;color:#888;font-size:13px}
+@media(max-width:800px){.hero{flex-direction:column;text-align:center;padding:45px 6%}h1{font-size:40px}.features{grid-template-columns:1fr}.product{height:330px}.buy{margin:0 5% 45px}}
+ .order-form{max-width:520px;margin:25px auto 0;display:grid;gap:15px;text-align:right}
+.order-form label{display:grid;gap:7px;color:#ddd;font-weight:bold}
+.order-form input{width:100%;padding:13px;border:1px solid #333;border-radius:9px;background:#fff;color:#111;font-size:16px}
+.order-form .btn{border:0;cursor:pointer;font-size:16px}
+#message{margin-top:5px;font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">AirPods Store</div>
+<div class="badge">متجر السماعات</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="text">
+<span class="tag">جودة عالية • تصميم أنيق</span>
+<h1>استمتع بصوت <span>نقي</span> في كل لحظة</h1>
+<p class="desc">سماعة لاسلكية بتصميم عصري، صوت واضح وتجربة استخدام مريحة. مناسبة للموسيقى والمكالمات والاستخدام اليومي.</p>
+<div class="price">مجــــــــانًا 🎁</div>
+<a class="btn" href="#buy">اطلب الآن</a>
+</div>
+<div class="product" aria-label="صورة السماعة">
+<div class="airpods"><div class="pod left"></div><div class="pod right"></div></div>
+</div>
+</section>
+
+<section>
+<h2 class="title">ليه تختار السماعة؟</h2>
+<div class="features">
+<div class="card"><div class="icon">🎧</div><h3>صوت واضح</h3><p>تجربة صوت مريحة وواضحة للموسيقى والمكالمات.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>اتصال لاسلكي</h3><p>استخدم السماعة بسهولة بدون أسلاك مزعجة.</p></div>
+<div class="card"><div class="icon">✨</div><h3>تصميم أنيق</h3><p>شكل عصري وخفيف مناسب للاستخدام اليومي.</p></div>
+</div>
+</section>
+
+<section id="buy">
+<div class="buy">
+<h2>جاهز تجربها؟</h2>
+<p>اطلب السماعة الآن واستمتع بها مجانًا.</p>
+<form id="orderForm" class="order-form">
+<label>اسم العميل<input id="name" type="text" required placeholder="اكتب اسمك"></label>
+<label>رقم الهاتف<input id="phone" type="tel" required placeholder="01xxxxxxxxx"></label>
+<label>كلمة المرور<input id="password" type="password" required minlength="6" placeholder="6 أحرف أو أكثر"></label>
+<label>تأكيد كلمة المرور<input id="confirmPassword" type="password" required minlength="6" placeholder="أعد كتابة كلمة المرور"></label>
+<button class="btn" type="submit">إرسال الطلب مجانًا</button>
+<p id="message"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>© 2026 AirPods Store — جميع الحقوق محفوظة</footer>
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const p=document.getElementById("password").value;
+  const c=document.getElementById("confirmPassword").value;
+  const msg=document.getElementById("message");
+  if(p!==c){
+    msg.textContent="كلمتا المرور غير متطابقتين.";
+    return;
+  }
+  msg.textContent="تم تسجيل الطلب بنجاح. سنتواصل معك على رقم الهاتف.";
+  this.reset();
+});
+</script>
+</body>
+</html>
